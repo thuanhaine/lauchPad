@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/********************** custom variables *****************************/
+:root{
+    --bgcolor:#040404;
+    --textgray:#3f3f3f;
+    --glowcolor:#ff005b;
+    --glowcolor2:#fe3a80;
+    --drumpadcolor:#111;
+    --keyscolor:#1e1e1e;
+
+    --mainfont:'Quicksand', sans-serif;
+}
+/***************************** DEFAULTS ***************************************/
+body{
+    width: 100vw;
+    height: auto;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.5;
+    font-family: var(--mainfont);
+    background:var(--bgcolor);
+    background-size: cover;
+    color: var(--textgray);
+	box-sizing: border-box;
+
+}
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+.rockit{
+    transform: scale(1.05);
+   /*border:1px solid yellow;*/
+}
+.heading{
+    width: 100vw;
+    padding: 10% 5% 0;
+    text-align: center;
+}
+.neon{
+    margin:0;
+    font-size: 3.51vw;
+    color:white;
+    text-shadow: 0 0 20px var(--glowcolor);
+    position: relative;
+    display: inline-block;
+}
+.neon::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color:var(--glowcolor);
+    filter: blur(15px);
+}
+.neon::before{
+    content: '';
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:var(--glowcolor2);
+    z-index:-2;
+    opacity: 0.4;
+    filter: blur(100px);
+}
+.keypad{
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 25%;
+    gap: 28px;
+}
+.drum {
+    width: 250px;
+    height: 200px;
+    border-radius: 12px;
+    display: block;
+    background: rgb(236, 34, 236);
+    opacity: .8;
+}
+
+
+/* key hover */
+/* .key1:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key2:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key3:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key4:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key5:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key6:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key7:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key8:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+}
+.key9:hover{
+    transform: scale(1.05);
+   border:2px solid rgb(236, 34, 236);
+} */
+/* key hover */
+
+/* Code Thuan Hai */
+
+.effect {
+    transform:scale(1.03);
+    border:2px solid rgb(236, 112, 236);
+    opacity: 1;
+
+}
+
+
+
+
+/*************************MEDIAQUERIES*************************/
+
+@media screen and (max-width: 1100px){
+    .neon{
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 1000px){
+    .neon{
+        font-size: 7vw;
+    }
+    .heading {
+        padding: 24% 5% 0;
+    }
+    .key{
+        flex-grow: unset;
+        flex-basis: 19%;
+        padding:7px;
+    }
+    .keypad {
+        min-height: 30vh;
+        margin-top: 13%;
+    }
+}
+@media screen and (max-width:600px){
+    .neon{
+        font-size: 7vw;
+    }
+    .heading {
+        padding: 24% 5% 0;
+    }
+    .key{
+        flex-grow: unset;
+        flex-basis: 30%;
+        padding:7px;
+    }
+    .keypad{
+        min-height: 40vh;
+	justify-content:space-around;
+        justify-content: space-evenly;
+        margin-top: 13%;
+    }
+}
+.character{
+    font-size: 50px;
+    text-align: center;
+}
