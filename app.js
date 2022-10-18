@@ -45,7 +45,7 @@ function deteleEffect () {
 function handlePlayGame() {
     window.addEventListener('keydown', (e) => {
         let key = e.keyCode;
-        console.log(key);
+
         switch (key) {
             case 97:
                 drumList[6].classList.add('effect');

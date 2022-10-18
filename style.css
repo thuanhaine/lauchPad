@@ -64,6 +64,7 @@ body{
     z-index: 1;
     text-align: center;
 }
+
 .gameplay {
     display: none;
     text-align: center;
@@ -88,6 +89,7 @@ body{
     position: relative;
 
 }
+
 .fa-arrow-left {
     font-size: 62px;   
     margin-left: 25%;
@@ -118,7 +120,6 @@ body{
 }
 .keypad + .keypad {
     margin-top: 24px;
-
 }
 
 /* key hover */
