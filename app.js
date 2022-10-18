@@ -45,8 +45,10 @@ function deteleEffect () {
 function handlePlayGame() {
     window.addEventListener('keydown', (e) => {
         let key = e.keyCode;
-
         switch (key) {
+            case 32: 
+                handlePlayMusic();
+                break;
             case 97:
                 drumList[6].classList.add('effect');
                 const sound97 = new Audio('./audio/sounds_snare.wav')

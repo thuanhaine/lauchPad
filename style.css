@@ -94,16 +94,16 @@ body{
     font-size: 62px;   
     margin-left: 25%;
 }
-.stop::after {
-    top: 45%;
-    left: 0;
-    content: "";
-    position: absolute;
-    height: 5px;
-    width: 120%;    
-    background-color: white;
-    z-index: -1;
+.playing {
+
+    color: var(--glowcolor2);
 }
+.stop {
+    color: #ccc;
+    opacity: .5;
+
+}
+
 .keypad{
     display: flex;
     gap: 24px;
@@ -115,50 +115,59 @@ body{
     height: 200px;
     border-radius: 12px;
     display: block;
-    background: rgb(236, 34, 236);
-    opacity: .8;
+    background-color: white;
+    opacity: .9;
 }
 .keypad + .keypad {
     margin-top: 24px;
 }
 
-/* key hover */
-/* .key1:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+/* key*/
+.key1 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px red;
 }
-.key2:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key2 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px greenyellow;
 }
-.key3:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key3 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px #A52CD2;
 }
-.key4:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key4 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px #e99803;
 }
-.key5:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key5 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px #0D84ED;
 }
-.key6:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key6 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px rgb(0, 255, 157);
 }
-.key7:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key7 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px rgb(0, 255, 234);
 }
-.key8:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
+.key8 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px rgb(255, 251, 0);
 }
-.key9:hover{
-    transform: scale(1.05);
-   border:2px solid rgb(236, 34, 236);
-} */
+.key9 {
+    
+   background-color: white;
+   box-shadow: inset 0 0 120px rgb(55, 0, 255);
+}
 /* key hover */
 
 /* Code Thuan Hai */
@@ -166,7 +175,7 @@ body{
 .effect {
     
     transform:scale(1.03);
-    border:2px solid rgb(236, 112, 236);
+    border:2px solid white;
     opacity: 1;
 
 }
