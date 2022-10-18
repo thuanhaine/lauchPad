@@ -68,6 +68,10 @@ body{
     display: none;
     text-align: center;
 }
+.nav {
+    text-align: left;
+}
+
 .fa-solid {
     margin-top: 50px;
     font-size: 130px;
@@ -84,13 +88,17 @@ body{
     position: relative;
 
 }
+.fa-arrow-left {
+    font-size: 62px;   
+    margin-left: 25%;
+}
 .stop::after {
     top: 45%;
     left: 0;
     content: "";
     position: absolute;
     height: 5px;
-    width: 120%;
+    width: 120%;    
     background-color: white;
     z-index: -1;
 }

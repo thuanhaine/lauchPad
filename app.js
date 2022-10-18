@@ -2,6 +2,8 @@ const drumList = document.querySelectorAll('.drum')
 const btnPlay = document.querySelector('.fa-play')
 const btnPlayMusic = document.querySelector('.fa-music')
 const music = new Audio('./audio/sound_mono.mp3');
+const btnback = document.querySelector('.fa-arrow-left')
+
 
 function start (){
     handleHomePage();
@@ -15,21 +17,8 @@ start();
 function handleHomePage() {
     
     btnPlayMusic.onclick = function() {
-
-        if(btnPlayMusic.classList.contains('stop')){
-                this.classList.remove('stop');
-                this.classList.add('playing');
-
-                music.play();
-        }
-        else if(btnPlayMusic.classList.contains('playing')) 
-             {
-                this.classList.remove('playing');
-                this.classList.add('stop');
-                music.pause();
-                music.currentTime = 0;
-
-             }
+        handlePlayMusic();
+        
 
     }
 
@@ -38,6 +27,13 @@ function handleHomePage() {
         document.querySelector('.gameplay').style.display = 'block';
         music.pause();
                 music.currentTime = 0;
+    };
+
+
+    btnback.onclick = function(){
+        document.querySelector('.gameplay').style.display = 'none';
+        document.querySelector('.homepage').style.display = 'block';
+        handlePlayMusic();
     };
 }
 function deteleEffect () {
@@ -128,11 +124,19 @@ function handlePlayGame() {
     });
 }
 
-function playMusic (){
-    const music = new Audio('./audio/sound_mono.mp3');
+function handlePlayMusic (){
+    if(btnPlayMusic.classList.contains('stop')){
+        btnPlayMusic.classList.remove('stop');
+        btnPlayMusic.classList.add('playing');
 
-    if(btnPlayMusic.classList.contains('playing'))
-        {
-            music.play();
-        }
+        music.play();
+    }
+    else if(btnPlayMusic.classList.contains('playing')) 
+     {
+        btnPlayMusic.classList.remove('playing');
+        btnPlayMusic.classList.add('stop');
+        music.pause();
+        music.currentTime = 0;
+
+     }
 }
