@@ -63,10 +63,11 @@ body{
 .homepage {
     z-index: 1;
     text-align: center;
+    display: none;
 }
 
 .gameplay {
-    display: none;
+    /* display: none; */
     text-align: center;
 }
 .nav {
